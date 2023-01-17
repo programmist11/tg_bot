@@ -1,8 +1,9 @@
+from aiogram import Dispatcher, types
 from aiogram.dispatcher import FSMContext
-from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher.filters import Text
-from aiogram import types, Dispatcher
-from create_bot import dp, bot
+from aiogram.dispatcher.filters.state import State, StatesGroup
+
+from create_bot import bot, dp
 from data_base.sqlite_db import sql_add_command
 from keyboards import admin_kb
 
@@ -14,8 +15,6 @@ class FSMAdmin(StatesGroup):
     name = State()
     description = State()
     price = State()
-
-
 
 
 async def make_changes_command(message: types.Message):
@@ -78,9 +77,6 @@ async def load_price(message: types.Message, state: FSMContext):
 
         await sql_add_command(state)
         await state.finish()
-
-
-
 
 
 def register_handlers_admin(dp: Dispatcher):

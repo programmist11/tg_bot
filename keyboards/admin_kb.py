@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 b1 = KeyboardButton('/Загрузить')
 b2 = KeyboardButton('/Удалить')

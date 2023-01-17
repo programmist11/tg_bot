@@ -1,9 +1,10 @@
-from aiogram import types, Dispatcher
-from create_bot import dp, bot
-from keyboards import kb_client
+from aiogram import Dispatcher, types
 from aiogram.types import ReplyKeyboardRemove
-from data_base import sqlite_db
+
 from config_reader import config
+from create_bot import bot, dp
+from data_base import sqlite_db
+from keyboards import kb_client
 
 
 async def command_start(message: types.Message):
@@ -23,7 +24,6 @@ async def command_place(message: types.Message):
                             latitude=config.latitude.get_secret_value(),
                             longitude=config.longitude.get_secret_value()
                             )
-
 
 
 async def command_menu(message: types.Message):

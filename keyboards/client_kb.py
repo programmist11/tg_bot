@@ -1,5 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 b1 = KeyboardButton('/Режим_работы')
 b2 = KeyboardButton('/Расположение')

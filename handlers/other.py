@@ -1,7 +1,8 @@
 import json
 import string
 
-from aiogram import types, Dispatcher
+from aiogram import Dispatcher, types
+
 from create_bot import dp
 
 

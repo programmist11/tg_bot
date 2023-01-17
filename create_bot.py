@@ -1,9 +1,8 @@
-import os
-
-from config_reader import config
-from aiogram.dispatcher import Dispatcher
 from aiogram import Bot
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
+from aiogram.dispatcher import Dispatcher
+
+from config_reader import config
 
 storage = MemoryStorage()
 
